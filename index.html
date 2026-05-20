@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RealTraffic — 유튜브 트래픽 광고</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Noto Sans KR', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- NAVIGATION -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <a href="#" class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center">
+            <i class="fa-brands fa-youtube text-white text-sm"></i>
+          </div>
+          <span class="font-black text-lg tracking-tight">Real<span class="text-red-600">Traffic</span></span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#service" class="nav-link" data-ko="서비스소개" data-en="Services">서비스소개</a>
+          <a href="#pricing" class="nav-link" data-ko="요금제" data-en="Pricing">요금제</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#contact" class="nav-link" data-ko="상담신청" data-en="Contact">상담신청</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button id="langToggle" class="lang-btn">
+            <span id="langCurrent">KO</span>
+            <span class="text-gray-300 mx-1">|</span>
+            <span id="langOther" class="text-gray-400">EN</span>
+          </button>
+          <a href="https://t.me/TELEGRAM_ID" target="_blank" class="hidden md:inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-4 py-2 rounded-full transition-colors">
+            <i class="fa-brands fa-telegram"></i>
+            <span data-ko="상담하기" data-en="Get Started">상담하기</span>
+          </a>
+          <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-700">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-5 space-y-4">
+      <a href="#service" class="block text-sm font-medium text-gray-600" data-ko="서비스소개" data-en="Services">서비스소개</a>
+      <a href="#pricing" class="block text-sm font-medium text-gray-600" data-ko="요금제" data-en="Pricing">요금제</a>
+      <a href="#faq" class="block text-sm font-medium text-gray-600">FAQ</a>
+      <a href="#contact" class="block text-sm font-medium text-gray-600" data-ko="상담신청" data-en="Contact">상담신청</a>
+      <a href="https://t.me/TELEGRAM_ID" target="_blank" class="block bg-red-600 text-white text-sm font-bold px-4 py-3 rounded-full text-center" data-ko="텔레그램 상담" data-en="Telegram Chat">텔레그램 상담</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center overflow-hidden pt-16">
+    <div class="hero-bg absolute inset-0"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div data-aos="fade-right" data-aos-duration="800">
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="badge">Zero Fake</span>
+            <span class="badge">100% Real</span>
+            <span class="badge">No Bots. Just Real Devices</span>
+          </div>
+
+          <h1 class="text-5xl md:text-6xl font-black leading-[1.1] mb-6">
+            <span class="block text-gray-900" data-ko="오직 실제 기기로만," data-en="Real Devices Only,">오직 실제 기기로만,</span>
+            <span class="text-gradient">Real Traffic.</span>
+          </h1>
+
+          <p class="text-lg text-gray-500 mb-10 leading-relaxed"
+             data-ko="진짜 스마트폰이 모여 만드는 진짜 알고리즘의 선택. 데이터센터 IP가 아닙니다. 실제 통신사 모바일 트래픽입니다."
+             data-en="Real smartphones make the real algorithm choice. Not datacenter IPs — real mobile carrier traffic.">
+            진짜 스마트폰이 모여 만드는 진짜 알고리즘의 선택.<br class="hidden sm:block"> 데이터센터 IP가 아닙니다. 실제 통신사 모바일 트래픽입니다.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#pricing" class="btn-primary" data-ko="요금제 보기" data-en="View Pricing">요금제 보기</a>
+            <a href="https://t.me/TELEGRAM_ID" target="_blank" class="btn-secondary">
+              <i class="fa-brands fa-telegram"></i>
+              <span data-ko="텔레그램 상담" data-en="Telegram Chat">텔레그램 상담</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-6 mt-14 pt-8 border-t border-gray-100">
+            <div>
+              <div class="text-3xl font-black text-red-600 font-inter">100%</div>
+              <div class="text-xs text-gray-500 mt-1" data-ko="한국 가정용 IP" data-en="Korean Home IP">한국 가정용 IP</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-red-600 font-inter">24H</div>
+              <div class="text-xs text-gray-500 mt-1" data-ko="이내 캠페인 시작" data-en="Campaign Start">이내 캠페인 시작</div>
+            </div>
+            <div>
+              <div class="text-3xl font-black text-red-600 font-inter">0</div>
+              <div class="text-xs text-gray-500 mt-1" data-ko="봇·가짜 트래픽" data-en="Bots / Fakes">봇·가짜 트래픽</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex justify-center items-center" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+          <div class="hero-graphic">
+            <div class="play-ring ring-3"></div>
+            <div class="play-ring ring-2"></div>
+            <div class="play-ring ring-1"></div>
+            <div class="play-btn">
+              <svg viewBox="0 0 80 80" class="w-20 h-20">
+                <polygon points="26,18 26,62 66,40" fill="white"/>
+              </svg>
+            </div>
+            <div class="hero-chip chip-1" data-ko="실제 기기" data-en="Real Device">실제 기기</div>
+            <div class="hero-chip chip-2" data-ko="한국 가정용 IP" data-en="Korean Home IP">한국 가정용 IP</div>
+            <div class="hero-chip chip-3" data-ko="키워드 검색 유입" data-en="Keyword Traffic">키워드 검색 유입</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TICKER BANNER -->
+  <div class="bg-red-600 py-3 overflow-hidden">
+    <div class="ticker-track">
+      <span class="ticker-item">✅ 첫 구매 시 1,000 조회수 무료 제공 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+      <span class="ticker-item">✅ 100% 한국 가정용 IP &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+      <span class="ticker-item">✅ 3개월 계약 시 10% 할인 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+      <span class="ticker-item">✅ No Bots. Just Real Devices &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+      <span class="ticker-item">✅ 첫 구매 시 1,000 조회수 무료 제공 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+      <span class="ticker-item">✅ 100% 한국 가정용 IP &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+      <span class="ticker-item">✅ 3개월 계약 시 10% 할인 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+      <span class="ticker-item">✅ No Bots. Just Real Devices &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+
+  <!-- SERVICE -->
+  <section id="service" class="py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-20" data-aos="fade-up">
+        <span class="section-tag" data-ko="서비스 소개" data-en="Our Services">서비스 소개</span>
+        <h2 class="text-4xl md:text-5xl font-black mt-4 mb-5 leading-tight">
+          <span data-ko="대형 유튜버들이 숨겨왔던" data-en="The Secret Behind">대형 유튜버들이 숨겨왔던</span><br>
+          <span class="text-red-600" data-ko="초기 부스팅의 비밀" data-en="Top Creators' Growth">초기 부스팅의 비밀</span>
+        </h2>
+        <p class="text-gray-500 max-w-lg mx-auto"
+           data-ko="진짜 기기에서 나오는 트래픽은 결과부터 다릅니다."
+           data-en="Traffic from real devices delivers fundamentally different results.">
+          진짜 기기에서 나오는 트래픽은 결과부터 다릅니다.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="svc-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="svc-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3 class="text-lg font-bold mb-3" data-ko="실제 스마트폰 트래픽" data-en="Real Smartphone Traffic">실제 스마트폰 트래픽</h3>
+          <p class="text-gray-500 text-sm leading-relaxed"
+             data-ko="데이터센터 IP가 아닌 실제 한국 통신사 모바일 트래픽. 진짜 기기에서 나오는 시청 데이터를 유튜브 알고리즘이 다르게 인식합니다."
+             data-en="Real Korean mobile carrier traffic, not datacenter IPs. YouTube's algorithm recognizes viewing data from real devices differently.">
+            데이터센터 IP가 아닌 실제 한국 통신사 모바일 트래픽. 진짜 기기에서 나오는 시청 데이터를 유튜브 알고리즘이 다르게 인식합니다.
+          </p>
+        </div>
+
+        <div class="svc-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="svc-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3 class="text-lg font-bold mb-3" data-ko="키워드 검색 유입" data-en="Keyword Search Traffic">키워드 검색 유입</h3>
+          <p class="text-gray-500 text-sm leading-relaxed"
+             data-ko="단순 링크 클릭이 아닙니다. 직접 키워드를 검색하고 시청하는 방식으로 알고리즘 반영률이 압도적으로 높습니다."
+             data-en="Not simple link clicks. Direct keyword search to watch — dramatically higher algorithm recognition rate.">
+            단순 링크 클릭이 아닙니다. 직접 키워드를 검색하고 시청하는 방식으로 알고리즘 반영률이 압도적으로 높습니다.
+          </p>
+        </div>
+
+        <div class="svc-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="svc-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3 class="text-lg font-bold mb-3" data-ko="24시간 수동 진행" data-en="24H Manual Operation">24시간 수동 진행</h3>
+          <p class="text-gray-500 text-sm leading-relaxed"
+             data-ko="자동화 봇이 아닙니다. 폰보드 서버를 통한 수동 진행으로 대량 물량도 안정적으로 처리합니다. 타사 비교 불가."
+             data-en="No automation bots. Manual operation via phone board server handles large volumes stably. Unmatched by competitors.">
+            자동화 봇이 아닙니다. 폰보드 서버를 통한 수동 진행으로 대량 물량도 안정적으로 처리합니다. 타사 비교 불가.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-16 p-10 rounded-3xl bg-gray-50 border border-gray-100 text-center" data-aos="fade-up">
+        <p class="text-xl md:text-2xl font-black text-gray-900 mb-2"
+           data-ko="추천 영상 노출의 치트키, Real Traffic."
+           data-en="The cheat code for recommended video exposure, Real Traffic.">
+          추천 영상 노출의 치트키, Real Traffic.
+        </p>
+        <p class="text-gray-500 text-sm"
+           data-ko="라이브 방송 동접자 수의 판도를 바꾸다. 알고리즘의 파도를 타는 법, 우리가 알려드립니다."
+           data-en="Changing the game for live concurrent viewers. We'll show you how to ride the algorithm wave.">
+          라이브 방송 동접자 수의 판도를 바꾸다. 알고리즘의 파도를 타는 법, 우리가 알려드립니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PRICING -->
+  <section id="pricing" class="py-28 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-6" data-aos="fade-up">
+        <span class="section-tag" data-ko="요금제" data-en="Pricing">요금제</span>
+        <h2 class="text-4xl md:text-5xl font-black mt-4 mb-4"
+            data-ko="가능성을 현실로 만드는 숫자" data-en="Numbers That Turn Possibility Into Reality">
+          가능성을 현실로 만드는 숫자
+        </h2>
+        <p class="text-gray-500"
+           data-ko="모든 플랜은 100% 한국 가정용 IP, 실제 키워드 검색 유입으로 진행됩니다."
+           data-en="All plans use 100% Korean home IPs with real keyword search traffic.">
+          모든 플랜은 100% 한국 가정용 IP, 실제 키워드 검색 유입으로 진행됩니다.
+        </p>
+      </div>
+
+      <div class="flex justify-center mb-14" data-aos="fade-up">
+        <div class="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-700 px-5 py-2.5 rounded-full text-sm font-bold">
+          <i class="fa-solid fa-gift"></i>
+          <span data-ko="첫 구매 시 1,000 조회수 무료 제공" data-en="First purchase: 1,000 free views">첫 구매 시 1,000 조회수 무료 제공</span>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
+
+        <!-- Card 1 -->
+        <div class="price-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="price-card-head">
+            <p class="plan-label" data-ko="조회수 기본" data-en="Basic Views">조회수 기본</p>
+            <div class="flex items-baseline gap-1 mt-2">
+              <span class="plan-price">₩50,000</span>
+              <span class="plan-unit" data-ko="/ 1,000회" data-en="/ 1,000 views">/ 1,000회</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i><span data-ko="키워드 검색 조회수 1,000회" data-en="1,000 keyword search views">키워드 검색 조회수 1,000회</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="영상 10개 이하" data-en="Up to 10 videos">영상 10개 이하</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="100% 한국 가정용 IP" data-en="100% Korean home IP">100% 한국 가정용 IP</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="24시간 수동 진행" data-en="24H manual operation">24시간 수동 진행</span></li>
+          </ul>
+          <div class="price-card-foot">
+            <a href="https://t.me/TELEGRAM_ID" target="_blank" class="plan-btn-outline"
+               data-ko="텔레그램으로 신청" data-en="Apply via Telegram">텔레그램으로 신청</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="price-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="price-card-head">
+            <p class="plan-label" data-ko="조회수 + 반응" data-en="Views + Engagement">조회수 + 반응</p>
+            <div class="flex items-baseline gap-1 mt-2">
+              <span class="plan-price">₩70,000</span>
+              <span class="plan-unit" data-ko="/ 1,000회" data-en="/ 1,000 views">/ 1,000회</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i><span data-ko="키워드 검색 조회수 1,000회" data-en="1,000 keyword search views">키워드 검색 조회수 1,000회</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="좋아요 100개 포함" data-en="Includes 100 likes">좋아요 100개 포함</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="영상 10개 이하" data-en="Up to 10 videos">영상 10개 이하</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="100% 한국 가정용 IP" data-en="100% Korean home IP">100% 한국 가정용 IP</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="24시간 수동 진행" data-en="24H manual operation">24시간 수동 진행</span></li>
+          </ul>
+          <div class="price-card-foot">
+            <a href="https://t.me/TELEGRAM_ID" target="_blank" class="plan-btn-outline"
+               data-ko="텔레그램으로 신청" data-en="Apply via Telegram">텔레그램으로 신청</a>
+          </div>
+        </div>
+
+        <!-- Card 3 BEST -->
+        <div class="price-card price-card-best" data-aos="fade-up" data-aos-delay="200">
+          <div class="best-tag">BEST</div>
+          <div class="price-card-head">
+            <p class="plan-label plan-label-white" data-ko="풀 패키지" data-en="Full Package">풀 패키지</p>
+            <div class="flex items-baseline gap-1 mt-2">
+              <span class="plan-price plan-price-white">₩170,000</span>
+              <span class="plan-unit plan-unit-white" data-ko="/ 풀 옵션" data-en="/ full option">/ 풀 옵션</span>
+            </div>
+          </div>
+          <ul class="plan-features plan-features-white">
+            <li><i class="fa-solid fa-check"></i><span data-ko="키워드 검색 조회수 1,000회" data-en="1,000 keyword search views">키워드 검색 조회수 1,000회</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="좋아요 100개 포함" data-en="Includes 100 likes">좋아요 100개 포함</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="시청시간 1,000시간 포함" data-en="1,000 watch hours included">시청시간 1,000시간 포함</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="알고리즘 최적화 풀옵션" data-en="Full algorithm optimization">알고리즘 최적화 풀옵션</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="100% 한국 가정용 IP" data-en="100% Korean home IP">100% 한국 가정용 IP</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="24시간 수동 진행" data-en="24H manual operation">24시간 수동 진행</span></li>
+          </ul>
+          <div class="price-card-foot">
+            <a href="https://t.me/TELEGRAM_ID" target="_blank" class="plan-btn-white"
+               data-ko="텔레그램으로 신청" data-en="Apply via Telegram">텔레그램으로 신청</a>
+          </div>
+        </div>
+
+        <!-- Card 4 Live -->
+        <div class="price-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="price-card-head">
+            <p class="plan-label" data-ko="라이브 방송" data-en="Live Boost">라이브 방송</p>
+            <div class="flex items-baseline gap-1 mt-2">
+              <span class="plan-price text-2xl">₩20,000,000</span>
+              <span class="plan-unit" data-ko="/ 월" data-en="/ month">/ 월</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i><span data-ko="실시간 동접 700~1,000명 보장" data-en="700~1,000 concurrent viewers">실시간 동접 700~1,000명 보장</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="주 6일 운영" data-en="6 days a week">주 6일 운영</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="시청시간 2~3시간 / 회" data-en="2~3 hours per session">시청시간 2~3시간 / 회</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="100% 한국 가정용 IP" data-en="100% Korean home IP">100% 한국 가정용 IP</span></li>
+            <li><i class="fa-solid fa-check"></i><span data-ko="실시간 진행 모니터링" data-en="Real-time monitoring">실시간 진행 모니터링</span></li>
+          </ul>
+          <div class="price-card-foot">
+            <a href="https://t.me/TELEGRAM_ID" target="_blank" class="plan-btn-outline"
+               data-ko="텔레그램으로 신청" data-en="Apply via Telegram">텔레그램으로 신청</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center text-sm text-gray-500" data-aos="fade-up">
+        <i class="fa-solid fa-star text-yellow-400 mr-1"></i>
+        <span data-ko="3개월 계약 시 전 플랜 10% 할인 · 하루 영상 30개 이상 대량 주문 별도 협의"
+              data-en="10% off all plans for 3-month contracts · Bulk orders (30+ videos/day) negotiable">
+          3개월 계약 시 전 플랜 10% 할인 · 하루 영상 30개 이상 대량 주문 별도 협의
+        </span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section id="faq" class="py-28 bg-white">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="section-tag">FAQ</span>
+        <h2 class="text-4xl font-black mt-4"
+            data-ko="자주 묻는 질문" data-en="Frequently Asked Questions">자주 묻는 질문</h2>
+      </div>
+
+      <div class="space-y-3">
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+          <button class="faq-q">
+            <span data-ko="조회수가 실제 유저에게서 나오는 건가요?" data-en="Do the views come from real users?">조회수가 실제 유저에게서 나오는 건가요?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-a">
+            <p data-ko="네. 실제 한국 스마트폰 기기에서 발생하는 트래픽입니다. 데이터센터 IP나 봇을 일절 사용하지 않으며, 실제 통신사 모바일 트래픽으로만 진행합니다."
+               data-en="Yes. Traffic originates from real Korean smartphones. We don't use datacenter IPs or bots — only real mobile carrier traffic.">
+              네. 실제 한국 스마트폰 기기에서 발생하는 트래픽입니다. 데이터센터 IP나 봇을 일절 사용하지 않으며, 실제 통신사 모바일 트래픽으로만 진행합니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="40">
+          <button class="faq-q">
+            <span data-ko="단순 링크 클릭이 아닌가요?" data-en="Is it more than just link clicks?">단순 링크 클릭이 아닌가요?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-a">
+            <p data-ko="단순 영상 링크 직접 접속이 아닙니다. 직접 키워드를 검색하고, 검색 결과에서 영상을 클릭해 시청하는 방식으로 진행합니다. 알고리즘 반영률이 압도적으로 높습니다."
+               data-en="Not direct link visits. We search keywords directly, click and watch from search results — dramatically higher algorithm recognition.">
+              단순 영상 링크 직접 접속이 아닙니다. 직접 키워드를 검색하고, 검색 결과에서 영상을 클릭해 시청하는 방식으로 진행합니다. 알고리즘 반영률이 압도적으로 높습니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="80">
+          <button class="faq-q">
+            <span data-ko="계정 정지나 영상 삭제 위험은 없나요?" data-en="Is there a risk of account suspension?">계정 정지나 영상 삭제 위험은 없나요?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-a">
+            <p data-ko="실제 기기 기반의 자연스러운 트래픽으로 유튜브 정책에 위반되지 않습니다. 저희는 안전한 방식만을 고집합니다."
+               data-en="Real device-based natural traffic doesn't violate YouTube policies. We insist on safe methods only.">
+              실제 기기 기반의 자연스러운 트래픽으로 유튜브 정책에 위반되지 않습니다. 저희는 안전한 방식만을 고집합니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="120">
+          <button class="faq-q">
+            <span data-ko="신청 후 언제 시작되나요?" data-en="When does it start after I apply?">신청 후 언제 시작되나요?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-a">
+            <p data-ko="텔레그램 상담 및 결제 확인 완료 후 24시간 이내에 캠페인이 시작됩니다."
+               data-en="Campaign starts within 24 hours after Telegram consultation and payment confirmation.">
+              텔레그램 상담 및 결제 확인 완료 후 24시간 이내에 캠페인이 시작됩니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="160">
+          <button class="faq-q">
+            <span data-ko="대량 주문도 가능한가요?" data-en="Can I place bulk orders?">대량 주문도 가능한가요?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-a">
+            <p data-ko="하루 영상 30개 이상은 별도 협의를 통해 맞춤 견적을 제공합니다. 타사 비교 불가한 대량 물량 처리 능력을 갖추고 있습니다. 텔레그램으로 문의해 주세요."
+               data-en="Orders of 30+ videos per day get custom quotes through consultation. We have unmatched bulk capacity. Contact us via Telegram.">
+              하루 영상 30개 이상은 별도 협의를 통해 맞춤 견적을 제공합니다. 타사 비교 불가한 대량 물량 처리 능력을 갖추고 있습니다. 텔레그램으로 문의해 주세요.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+          <button class="faq-q">
+            <span data-ko="결제 및 환불 정책은 어떻게 되나요?" data-en="What is the payment and refund policy?">결제 및 환불 정책은 어떻게 되나요?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-a">
+            <p data-ko="결제 방법은 텔레그램 상담 후 개별 안내드립니다. 캠페인 시작 전 취소 시 전액 환불되며, 진행 중 미달성분에 대해서는 개별 협의합니다."
+               data-en="Payment methods are provided individually after consultation. Full refund if canceled before campaign start; shortfalls negotiated individually.">
+              결제 방법은 텔레그램 상담 후 개별 안내드립니다. 캠페인 시작 전 취소 시 전액 환불되며, 진행 중 미달성분에 대해서는 개별 협의합니다.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-28 bg-red-600 relative overflow-hidden">
+    <div class="contact-deco"></div>
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div data-aos="fade-up">
+        <p class="text-red-200 text-xs font-black tracking-[0.2em] uppercase mb-5"
+           data-ko="상담신청" data-en="Contact Us">상담신청</p>
+        <h2 class="text-4xl md:text-5xl font-black text-white leading-tight mb-6">
+          <span data-ko="지금 바로 트래픽의" data-en="Experience the Difference">지금 바로 트래픽의</span><br>
+          <span data-ko="차이를 경험하세요" data-en="of Real Traffic Now">차이를 경험하세요</span>
+        </h2>
+        <p class="text-red-200 text-lg mb-10"
+           data-ko="Real Traffic, Real Results. 알고리즘의 선택을 받는 첫 번째 단계."
+           data-en="Real Traffic, Real Results. The first step to being chosen by the algorithm.">
+          Real Traffic, Real Results. 알고리즘의 선택을 받는 첫 번째 단계.
+        </p>
+        <a href="https://t.me/TELEGRAM_ID" target="_blank" class="contact-cta">
+          <i class="fa-brands fa-telegram text-xl"></i>
+          <span data-ko="텔레그램으로 상담 시작하기" data-en="Start Chat on Telegram">텔레그램으로 상담 시작하기</span>
+        </a>
+        <p class="text-red-300 text-xs mt-6"
+           data-ko="무료로 시작하세요 · 첫 구매 시 1,000 조회수 무료 제공"
+           data-en="Start free · 1,000 free views on first purchase">
+          무료로 시작하세요 · 첫 구매 시 1,000 조회수 무료 제공
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-950 text-gray-500 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center">
+            <i class="fa-brands fa-youtube text-white text-sm"></i>
+          </div>
+          <span class="font-black text-white">Real<span class="text-red-500">Traffic</span></span>
+        </div>
+        <p class="text-sm text-center">Real Traffic. Zero Fake. No Bots. Just Real Devices.</p>
+        <a href="https://t.me/TELEGRAM_ID" target="_blank" class="text-gray-500 hover:text-white transition-colors text-2xl">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+      </div>
+      <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+        <p class="text-xs text-gray-700">© 2025 RealTraffic. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
