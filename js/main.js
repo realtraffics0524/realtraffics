@@ -1,3 +1,6 @@
+const TG_URL = 'https://t.me/TELEGRAM_ID';
+document.querySelectorAll('[href="https://t.me/TELEGRAM_ID"]').forEach(a => { a.href = TG_URL; });
+
 // AOS init
 AOS.init({ duration: 700, once: true, offset: 60 });
 
@@ -25,7 +28,7 @@ document.getElementById('langToggle').addEventListener('click', () => {
   applyLang(lang === 'ko' ? 'en' : 'ko');
 });
 
-applyLang(lang);
+if (lang !== 'ko') applyLang(lang);
 
 // Mobile menu
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
