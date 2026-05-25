@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bgGlow" cx="30%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#7f1d1d" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#030712"/>
+  <rect width="1200" height="630" fill="url(#bgGlow)"/>
+
+  <!-- Top red accent -->
+  <rect x="0" y="0" width="1200" height="4" fill="#dc2626"/>
+
+  <!-- Vertical divider -->
+  <rect x="595" y="40" width="1" height="555" fill="#1f2937" opacity="0.6"/>
+
+  <!-- ─── LEFT ─── -->
+
+  <!-- Logo -->
+  <rect x="60" y="55" width="44" height="44" rx="9" fill="#dc2626"/>
+  <polygon points="72,70 72,86 91,78" fill="white"/>
+  <text x="116" y="88" font-family="Inter, Arial Black, sans-serif" font-weight="900" font-size="30" fill="white">Real<tspan fill="#dc2626">Traffic</tspan></text>
+
+  <!-- Headline -->
+  <text x="60" y="196" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif" font-weight="900" font-size="48" fill="white">유튜브 채널 성장의</text>
+  <text x="60" y="254" font-family="'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif" font-weight="900" font-size="48" fill="white">완벽한 파트너</text>
+
+  <!-- Subtext -->
+  <text x="60" y="305" font-family="Inter, Arial, sans-serif" font-size="20" fill="#6b7280">No Bots. Just Real Korean Devices.</text>
+
+  <!-- Divider -->
+  <rect x="60" y="342" width="492" height="1" fill="#1f2937"/>
+
+  <!-- Stats -->
+  <text x="138" y="400" font-family="Inter, Arial Black, sans-serif" font-weight="900" font-size="44" fill="#dc2626" text-anchor="middle">100%</text>
+  <text x="138" y="430" font-family="'Malgun Gothic', Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">한국 가정용 IP</text>
+
+  <text x="306" y="400" font-family="Inter, Arial Black, sans-serif" font-weight="900" font-size="44" fill="#dc2626" text-anchor="middle">24H</text>
+  <text x="306" y="430" font-family="'Malgun Gothic', Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">캠페인 시작</text>
+
+  <text x="474" y="400" font-family="Inter, Arial Black, sans-serif" font-weight="900" font-size="44" fill="#dc2626" text-anchor="middle">0</text>
+  <text x="474" y="430" font-family="'Malgun Gothic', Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">봇·가짜 트래픽</text>
+
+  <!-- Domain -->
+  <text x="60" y="590" font-family="Inter, Arial, sans-serif" font-size="16" fill="#4b5563">realtraffics.com</text>
+
+  <!-- ─── RIGHT ─── -->
+
+  <!-- Rings -->
+  <circle cx="900" cy="315" r="210" fill="none" stroke="#dc2626" stroke-width="1" opacity="0.12"/>
+  <circle cx="900" cy="315" r="158" fill="none" stroke="#dc2626" stroke-width="1" opacity="0.22"/>
+  <circle cx="900" cy="315" r="106" fill="none" stroke="#dc2626" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Play button -->
+  <circle cx="900" cy="315" r="72" fill="#dc2626"/>
+  <polygon points="878,278 878,352 948,315" fill="white"/>
+
+  <!-- Chip: 봇 0% -->
+  <rect x="675" y="122" width="126" height="38" rx="19" fill="#111827" stroke="#374151" stroke-width="1"/>
+  <text x="738" y="146" font-family="'Malgun Gothic', Arial, sans-serif" font-size="15" font-weight="700" fill="white" text-anchor="middle">봇 0%</text>
+
+  <!-- Chip: 한국 가정용 IP -->
+  <rect x="998" y="232" width="162" height="38" rx="19" fill="#111827" stroke="#374151" stroke-width="1"/>
+  <text x="1079" y="256" font-family="'Malgun Gothic', Arial, sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">한국 가정용 IP</text>
+
+  <!-- Chip: 키워드 검색 유입 -->
+  <rect x="742" y="442" width="180" height="38" rx="19" fill="#111827" stroke="#374151" stroke-width="1"/>
+  <text x="832" y="466" font-family="'Malgun Gothic', Arial, sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">키워드 검색 유입</text>
+</svg>
